@@ -1,0 +1,76 @@
+:root {
+  --green: #1f6b3a;
+  --green-light: #e6f2ea;
+  --ink: #1d2a22;
+  --muted: #55645a;
+  --line: #cfdad2;
+  --amber: #8a5a00;
+  --amber-light: #fff4dc;
+  --red: #9b1c1c;
+  --red-light: #fdeaea;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #f7faf8; line-height: 1.5; }
+button { font: inherit; cursor: pointer; }
+a { color: var(--green); }
+:focus-visible { outline: 3px solid #1a5fb4; outline-offset: 2px; }
+
+.app { max-width: 960px; margin: 0 auto; padding: 1rem; }
+.app-header h1 { margin: 0; font-size: 1.5rem; color: var(--green); }
+.tagline { margin: 0; color: var(--muted); }
+.draft-note { margin: 0.5rem 0 1rem; padding: 0.4rem 0.7rem; background: var(--amber-light); color: var(--amber); border-radius: 6px; font-size: 0.9rem; }
+
+.tabs { display: flex; gap: 0.25rem; border-bottom: 2px solid var(--line); margin-bottom: 0.75rem; overflow-x: auto; }
+.tab { border: none; background: none; padding: 0.6rem 1rem; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -2px; }
+.tab-active { color: var(--green); border-bottom-color: var(--green); font-weight: 600; }
+
+.crop-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+.chip { border: 1px solid var(--line); background: #fff; padding: 0.35rem 0.8rem; border-radius: 999px; }
+.chip-active { background: var(--green); border-color: var(--green); color: #fff; }
+
+.placeholder { padding: 2rem; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 8px; }
+
+.card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1rem; margin-bottom: 0.8rem; }
+.card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.sources { margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.unverified { color: var(--amber); font-weight: 700; cursor: help; }
+.badge { display: inline-block; padding: 0.1rem 0.55rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+
+/* Map */
+.map-box { height: 420px; border: 1px solid var(--line); border-radius: 8px; }
+.slider-row { display: flex; align-items: center; gap: 0.8rem; margin: 0.8rem 0; }
+.slider-row input[type='range'] { flex: 1; }
+.year-label { min-width: 6.5rem; font-weight: 700; color: var(--green); text-align: right; }
+.play { border: 1px solid var(--green); background: #fff; color: var(--green); padding: 0.35rem 0.9rem; border-radius: 6px; }
+.map-note { font-size: 0.85rem; color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: var(--muted); margin: 0.4rem 0; }
+.dot { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 50%; margin-right: 0.3rem; vertical-align: middle; }
+.event-list { padding-left: 1.2rem; }
+.event-list li { margin-bottom: 0.4rem; }
+
+/* Compare */
+.compare-grid { display: grid; grid-template-columns: 1fr; gap: 0.6rem; }
+@media (min-width: 640px) { .compare-grid { grid-template-columns: 1fr 1fr; } }
+.col { padding: 0.7rem; border-radius: 6px; }
+.col h4 { margin: 0 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.col-traditional { background: var(--amber-light); }
+.col-scientific { background: var(--green-light); }
+.support-yes { background: var(--green-light); color: var(--green); }
+.support-partly { background: var(--amber-light); color: var(--amber); }
+.support-no { background: var(--red-light); color: var(--red); }
+
+/* Avoid */
+.avoid-high { border-left: 6px solid var(--red); }
+.avoid-medium { border-left: 6px solid #c77700; }
+.sev-high { background: var(--red-light); color: var(--red); }
+.sev-medium { background: var(--amber-light); color: var(--amber); }
+.instead { margin: 0.4rem 0 0; padding: 0.5rem 0.7rem; background: var(--green-light); border-radius: 6px; }
+
+/* References */
+.ref-list { list-style: none; padding: 0; }
+.ref-actions { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.5rem; }
+.copy { border: 1px solid var(--green); background: #fff; color: var(--green); padding: 0.25rem 0.8rem; border-radius: 6px; font-size: 0.85rem; }
+.copy-status { font-size: 0.85rem; color: var(--green); }
